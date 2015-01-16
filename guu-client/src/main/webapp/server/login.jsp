@@ -15,15 +15,15 @@
 <title>登录</title>
 
 <!-- Core CSS - Include with every page -->
-<link href="resources/css/bootstrap.min.css" rel="stylesheet">
-<link href="resources/font-awesome/css/font-awesome.css"
+<link href="resources/common/css/bootstrap.min.css" rel="stylesheet">
+<link href="resources/common/font-awesome/css/font-awesome.css"
 	rel="stylesheet">
 <!-- SB Admin CSS - Include with every page -->
-<link href="resources/css/sb-admin.css" rel="stylesheet">
+<link href="resources/sadmin/css/sadmin.css" rel="stylesheet">
 
 <!-- Core Scripts - Include with every page -->
-<script src="resources/js/jquery-1.11.1.min.js"></script>
-<script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/common/js/jquery-1.11.1.min.js"></script>
+<script src="resources/common/js/bootstrap.min.js"></script>
 <script src="resources/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
 <!-- SB Admin Scripts - Include with every page -->
