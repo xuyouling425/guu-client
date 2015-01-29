@@ -34,8 +34,7 @@
 	<!-- 配置返回ftl视图解析 -->
 	<bean id="freemarkerViewResolver"
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
+		<property name="viewClass" value="cn.net.guu.core.spring.MyFreeMarkerView" />
 		<property name="order" value="1" />
 		<property name="prefix" value="/" />
 		<property name="suffix" value=".ftl" />
