@@ -36,7 +36,7 @@
 							name="loginForm">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="登录名" id="loginName" name="loginName" type="email" autofocus>
+                                    <input class="form-control" placeholder="登录名" id="loginName" name="loginName" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="登录密码" id="loginPassword" name="loginPassword" type="password" value="">

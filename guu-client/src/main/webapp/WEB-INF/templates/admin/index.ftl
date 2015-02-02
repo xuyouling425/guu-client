@@ -8,16 +8,10 @@
 
     <title>Start Bootstrap - SB Admin Version 2.0 Demo</title>
 
-    <!-- Core CSS - Include with every page -->
-    <link href="${base}/resources/common/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${base}/resources/common/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <!-- Page-Level Plugin CSS - Dashboard -->
     <link href="${base}/resources/common/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
     <link href="${base}/resources/common/css/plugins/timeline/timeline.css" rel="stylesheet">
-
-    <!-- SB Admin CSS - Include with every page -->
-    <link href="${base}/resources/admin/css/sadmin.css" rel="stylesheet">
 
 </head>
 
@@ -484,17 +478,10 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- Core Scripts - Include with every page -->
-    <script src="${base}/resources/common/js/jquery-1.11.1.js"></script>
-    <script src="${base}/resources/common/js/bootstrap.min.js"></script>
     <script src="${base}/resources/common/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-
     <!-- Page-Level Plugin Scripts - Dashboard -->
     <script src="${base}/resources/common/js/plugins/morris/raphael-2.1.0.min.js"></script>
     <script src="${base}/resources/common/js/plugins/morris/morris.js"></script>
-
-    <!-- SB Admin Scripts - Include with every page -->
-    <script src="${base}/resources/admin/js/sadmin.js"></script>
 
     <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
     <script src="${base}/resources/admin/js/demo/dashboard-demo.js"></script>

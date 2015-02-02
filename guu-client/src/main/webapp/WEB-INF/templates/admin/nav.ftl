@@ -1,3 +1,12 @@
+<!-- Core CSS - Include with every page -->
+<link href="${base}/resources/common/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="${base}/resources/common/font-awesome/css/font-awesome.css"
+	rel="stylesheet">
+<!-- SB Admin CSS - Include with every page -->
+<link href="${base}/resources/admin/css/sadmin.css" rel="stylesheet">
+
+
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -255,6 +264,9 @@
                         <li>
                             <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
+                         <li>
+                            <a href="${base}/about/selAbout"><i class="fa fa-edit fa-fw"></i> 关于</a>
+                        </li>
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -325,3 +337,14 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+        
+        
+        <!-- Core Scripts - Include with every page -->
+	<script src="${base}/resources/common/js/jquery-1.11.1.js"></script>
+	<script src="${base}/resources/common/js/bootstrap.min.js"></script>
+	<script
+		src="${base}/resources/common/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        
+        	<!-- SB Admin Scripts - Include with every page -->
+	<script src="${base}/resources/admin/js/sadmin.js"></script>
+        
