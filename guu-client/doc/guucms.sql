@@ -1,8 +1,12 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2014/8/2 0:10:10                             */
+/* Created on:     2015/2/13 23:16:36                           */
 /*==============================================================*/
 
+
+drop table if exists guu_cms_about;
+
+drop table if exists guu_cms_business;
 
 drop table if exists guu_sys_access;
 
@@ -23,6 +27,37 @@ drop table if exists guu_sys_role_authority;
 drop table if exists guu_sys_user;
 
 drop table if exists guu_sys_user_role;
+
+/*==============================================================*/
+/* Table: guu_cms_about                                         */
+/*==============================================================*/
+create table guu_cms_about
+(
+   about_id             varchar(32) not null,
+   company_name         varchar(32),
+   company_en           varchar(32),
+   company_address      varchar(300),
+   image_path           varchar(100),
+   contact_person       varchar(20),
+   company_email        varchar(60),
+   company_fax          varchar(20),
+   company_phone        varchar(60),
+   company_desc         varchar(500),
+   primary key (about_id)
+);
+
+/*==============================================================*/
+/* Table: guu_cms_business                                      */
+/*==============================================================*/
+create table guu_cms_business
+(
+   id                   varchar(32) not null,
+   name                 varchar(32),
+   description          varchar(300),
+   image                varchar(100),
+   content              text,
+   primary key (id)
+);
 
 /*==============================================================*/
 /* Table: guu_sys_access                                        */
