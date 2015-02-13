@@ -1,8 +1,8 @@
 <!-- Core CSS - Include with every page -->
-<link href="${base}/resources/common/css/bootstrap.min.css"
-	rel="stylesheet">
-<link href="${base}/resources/common/font-awesome/css/font-awesome.css"
-	rel="stylesheet">
+<link href="${base}/resources/common/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Core CSS - Include with every page -->
+<link href="${base}/resources/common/css/fileinput.min.css" rel="stylesheet">	
+<link href="${base}/resources/common/font-awesome/css/font-awesome.css" rel="stylesheet">
 <!-- SB Admin CSS - Include with every page -->
 <link href="${base}/resources/admin/css/sadmin.css" rel="stylesheet">
 
@@ -262,7 +262,7 @@
                             <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                            <a href="${base}/business/query"><i class="fa fa-edit fa-fw"></i> 服务</a>
                         </li>
                          <li>
                             <a href="${base}/about/selAbout"><i class="fa fa-edit fa-fw"></i> 关于</a>
@@ -340,11 +340,11 @@
         
         
         <!-- Core Scripts - Include with every page -->
-	<script src="${base}/resources/common/js/jquery-1.11.1.js"></script>
+	<!--<script src="${base}/resources/common/js/jquery-1.10.2.js"></script>-->
+	<script src="${base}/resources/common/js/jquery-1.11.2.js"></script>
 	<script src="${base}/resources/common/js/bootstrap.min.js"></script>
-	<script
-		src="${base}/resources/common/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-        
-        	<!-- SB Admin Scripts - Include with every page -->
+	<script src="${base}/resources/common/js/fileinput.js"></script>
+	<script src="${base}/resources/common/js/plugins/metisMenu/jquery.metisMenu.js"></script>        
+       <!-- SB Admin Scripts - Include with every page -->
 	<script src="${base}/resources/admin/js/sadmin.js"></script>
         

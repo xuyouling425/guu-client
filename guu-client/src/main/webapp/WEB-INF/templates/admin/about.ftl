@@ -7,18 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>关于</title>
-<!-- Core CSS - Include with every page -->
-<link href="${base}/resources/common/css/fileinput.min.css" rel="stylesheet">
 
-<script src="${base}/resources/common/js/jquery-1.11.1.js"></script>
-<script src="${base}/resources/common/js/fileinput.min.js"></script>
-
-	<script type="text/javascript">
-	
-	    	function login(){
-	    		$("#aboutForm").submit();
-	    	}
-	    </script>
 </head>
 
 <body>
@@ -52,7 +41,7 @@
 										</div>
 										<div class="form-group">
 												<label>公司地址图片</label>
-												 <input id="input-id" name="file" type="file" class="file" data-preview-file-type="text"  multiple="true" data-show-upload="false" data-show-caption="true">
+												 <input id="imgPath" name="imgPath" type="file" class="file" data-preview-file-type="text"  multiple="true" data-show-upload="false" data-show-caption="true">
 											</div>
 											<div class="form-group">
 												<label>联系人</label> <input class="form-control" type="text" id="contactPerson" name="contactPerson" value="${about.contactPerson}">
@@ -77,7 +66,8 @@
 									
 											<div class="form-group">
 												<label>公司介绍</label>
-												<textarea class="form-control" id="companyDesc" name="companyDesc" rows="5">${about.companyDesc}</textarea>
+												<textarea class="form-control" id="companyDesc" name="companyDesc" rows="5">${about.companyDesc} </textarea>
+												<input id="input-701" name="kartik-input-701" type="file" multiple=true class="file-loading" data-upload-url="/site/file-upload" data-upload-async="false" data-max-file-count="10">
 											</div>
 											<div class="form-group">
 												<button type="submit" class="btn btn-lg btn-default">保&nbsp;存</button>
@@ -101,7 +91,20 @@
 
 	</div>
 	<!-- /#wrapper -->
-
+    <script>
+		$("#imgPath").fileinput({
+		 initialPreview: [
+	        "<img src='${about.imagePath}' class='file-preview-image'>",
+	    	],
+	    overwriteInitial: true,
+	    initialCaption: "${about.imagePath}"
+		});
+    </script>
+	<script>
+	    function login(){
+	    	$("#aboutForm").submit();
+	    }
+	  </script>
 
 </body>
 

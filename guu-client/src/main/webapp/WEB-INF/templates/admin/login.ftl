@@ -57,7 +57,7 @@
     </div>
 
     <!-- Core Scripts - Include with every page -->
-    <script src="${base}/resources/common/js/jquery-1.11.1.js"></script>
+    <script src="${base}/resources/common/js/jquery-1.10.2.js"></script>
     <script src="${base}/resources/common/js/bootstrap.min.js"></script>
     <script src="${base}/resources/common/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
