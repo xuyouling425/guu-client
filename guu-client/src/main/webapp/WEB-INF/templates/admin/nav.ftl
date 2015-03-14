@@ -2,6 +2,7 @@
 <link href="${base}/resources/common/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Core CSS - Include with every page -->
 <link href="${base}/resources/common/css/fileinput.min.css" rel="stylesheet">	
+
 <link href="${base}/resources/common/font-awesome/css/font-awesome.css" rel="stylesheet">
 <!-- SB Admin CSS - Include with every page -->
 <link href="${base}/resources/admin/css/sadmin.css" rel="stylesheet">

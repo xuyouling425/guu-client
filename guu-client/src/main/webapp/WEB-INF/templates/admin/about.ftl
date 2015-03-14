@@ -100,11 +100,6 @@
 	    initialCaption: "${about.imagePath}"
 		});
     </script>
-	<script>
-	    function login(){
-	    	$("#aboutForm").submit();
-	    }
-	  </script>
 
 </body>
 
