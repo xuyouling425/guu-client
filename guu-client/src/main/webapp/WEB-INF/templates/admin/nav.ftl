@@ -260,7 +260,10 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                            <a href="${base}/message/query"><i class="fa fa-table fa-fw"></i> 信息</a>
+                        </li>
+                         <li>
+                            <a href="${base}/project/query"><i class="fa fa-edit fa-fw"></i> 案例</a>
                         </li>
                         <li>
                             <a href="${base}/business/query"><i class="fa fa-edit fa-fw"></i> 服务</a>
