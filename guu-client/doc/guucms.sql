@@ -1,12 +1,16 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2015/2/13 23:16:36                           */
+/* Created on:     2015/3/19 0:37:15                            */
 /*==============================================================*/
 
 
 drop table if exists guu_cms_about;
 
 drop table if exists guu_cms_business;
+
+drop table if exists guu_cms_message;
+
+drop table if exists guu_cms_project;
 
 drop table if exists guu_sys_access;
 
@@ -34,8 +38,8 @@ drop table if exists guu_sys_user_role;
 create table guu_cms_about
 (
    about_id             varchar(32) not null,
-   company_name         varchar(32),
-   company_en           varchar(32),
+   company_name         varchar(100),
+   company_en           varchar(100),
    company_address      varchar(300),
    image_path           varchar(100),
    contact_person       varchar(20),
@@ -52,11 +56,47 @@ create table guu_cms_about
 create table guu_cms_business
 (
    id                   varchar(32) not null,
-   name                 varchar(32),
+   name                 varchar(60),
    description          varchar(300),
    image                varchar(100),
    content              text,
    primary key (id)
+);
+
+/*==============================================================*/
+/* Table: guu_cms_message                                       */
+/*==============================================================*/
+create table guu_cms_message
+(
+   pid                  varchar(32) not null,
+   type                 int,
+   status               int,
+   title                varchar(100),
+   image                varchar(100),
+   description          varchar(300),
+   content              text,
+   user_id              varchar(32),
+   user_name            varchar(32),
+   user_phone           varchar(32),
+   user_email           varchar(60),
+   creat_time           datetime,
+   sequence             int,
+   primary key (pid)
+);
+
+/*==============================================================*/
+/* Table: guu_cms_project                                       */
+/*==============================================================*/
+create table guu_cms_project
+(
+   pid                  varchar(32) not null,
+   title                varchar(60),
+   description          varchar(300),
+   image                varchar(100),
+   content              text,
+   project_url          varchar(100),
+   status               int(4),
+   primary key (pid)
 );
 
 /*==============================================================*/
@@ -182,7 +222,9 @@ create table guu_sys_user
    user_name            varchar(32),
    login_name           varchar(32),
    login_password       varchar(64),
-   email                varchar(32),
+   email                varchar(60),
+   photo                varchar(100),
+   phone                varchar(20),
    telphone             varchar(20),
    creat_time           datetime,
    creat_user           varchar(32),
@@ -191,7 +233,8 @@ create table guu_sys_user
    role_code            varchar(32),
    user_status          int,
    issys                int,
-   user_desc            varchar(100),
+   user_desc            varchar(300),
+   content              text,
    remark               varchar(100),
    primary key (user_id)
 );

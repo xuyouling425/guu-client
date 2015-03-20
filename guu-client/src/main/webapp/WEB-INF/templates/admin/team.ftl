@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>案例列表</title>
+    <title>团队成员</title>
 
 </head>
 
@@ -19,7 +19,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">案例</h1>
+                    <h1 class="page-header">团队</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -40,19 +40,19 @@
                            
                             <!-- /.table-responsive -->
                            <div class="row">
-                           <#list projects as pro >
+                           <#list teams as team >
 							  <div class="col-sm-6 col-md-4 col-lg-3">
 							    <div class="thumbnail">
-							      <img src="${pro.image}">
+							      <img src="${team.photo}">
 							      <div class="caption">
-							        <h3>${pro.title}</h3>
+							        <h3>${team.userName}</h3>
 							        <p>
 							        	<!--修改-->
-			                           <button type="button" class="btn btn-default" aria-label="Left Align" onclick="toUpdate(${pro.pid})">
+			                           <button type="button" class="btn btn-default" aria-label="Left Align" onclick="toUpdate('${team.userId}')">
 										  <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 										</button>
 							         <!--删除-->
-			                           <button type="button" class="btn btn-default" aria-label="Left Align" onclick="del(${pro.pid})">
+			                           <button type="button" class="btn btn-default" aria-label="Left Align" onclick="del('${team.userId}')">
 										  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 										</button>
 									
@@ -80,15 +80,15 @@
     <script>
     
 	function toadd(){
-		window.location.href = "${base}/project/toAdd";
+		window.location.href = "${base}/team/toAdd";
 	}
     
     function del(pid){
-    	window.location.href = "${base}/project/delete?pid="+pid;
+    	window.location.href = "${base}/team/delete?pid="+pid;
     }
     
     function toUpdate(pid){
-    	window.location.href = "${base}/project/toUpdate?pid="+pid;
+    	window.location.href = "${base}/team/toUpdate?pid="+pid;
     }
     </script>
 

@@ -269,6 +269,9 @@
                             <a href="${base}/business/query"><i class="fa fa-edit fa-fw"></i> 服务</a>
                         </li>
                          <li>
+                            <a href="${base}/team/query"><i class="fa fa-edit fa-fw"></i> 团队</a>
+                        </li>
+                         <li>
                             <a href="${base}/about/selAbout"><i class="fa fa-edit fa-fw"></i> 关于</a>
                         </li>
                         <li>

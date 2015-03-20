@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="${base}/resources/common/css/summernote.css" rel="stylesheet">
-<title>新增信息</title>
+<title>修改信息</title>
 
 </head>
 
@@ -30,37 +30,40 @@
 						<div class="panel-heading">信息</div>
 						<div class="panel-body">
 							<div class="row">
-								<form role="form" id="msgForm" action="${base}/message/add" enctype="multipart/form-data" method="post">
+								<form role="form" id="msgForm" action="${base}/message/update" enctype="multipart/form-data" method="post">
 									<div class="col-lg-12">
 										<div class="form-group">
-											<label>信息标题 </label> <input class="form-control" type="text" id="title" name="title" >
+											<label>信息标题 </label> <input class="form-control" type="text" id="title" name="title" value="${message.title}">
+											<input type="hidden" id="pid" name="pid" value="${message.pid}">
+											<input type="hidden" id="creatTime" name="creatTime" value=" ${message.creatTime?datetime}">
 										</div>
 										
 										<div class="form-group">
 											<label>信息类型 </label> 
 											<select id="type" name="type" class="form-control">
-											  <option value="1">新闻类型</option>
-											  <option value="2">FAQ类型</option>
+											  <option value="1" <#if message.type == 1> selected</#if> >新闻类型</option>
+											  <option value="2" <#if message.type == 2> selected</#if>>FAQ类型</option>
 											</select>
 										</div>
 										
 										<div class="form-group">
 											<label>信息状态 </label> 
 											<select id="status" name="status" class="form-control">
-											  <option value="1">显示</option>
-											  <option value="2">隐藏</option>
+											  <option value="1" <#if message.status == 1> selected</#if>>显示</option>
+											  <option value="2" <#if message.status == 2> selected</#if>>隐藏</option>
 											</select>
 										</div>
 										
 										<div class="form-group">
 												<label>信息图片</label>
 												 <input id="imgPath" name="imgPath" type="file" class="file" data-preview-file-type="text"  multiple="true" data-show-upload="false" data-show-caption="true">
+												 <input type="hidden" id="image" name="image" value="${message.image}">
 										</div>
 								
 									
 											<div class="form-group">
 												<label>信息介绍</label>
-												<textarea class="form-control" id="description" name="description" rows="5"></textarea>
+												<textarea class="form-control" id="description" name="description" rows="5">${message.description} ${message.creatTime?datetime}</textarea>
 												<input id="input-701" name="kartik-input-701" type="file" multiple=true class="file-loading" data-upload-url="/site/file-upload" data-upload-async="false" data-max-file-count="10">
 											</div>
 											
@@ -94,15 +97,26 @@
 	</div>
 	
 	<script src="${base}/resources/common/js/summernote.min.js"></script>
-	<script src="${base}/resources/common/lang/summernote-zh-CN.js"></script>
 	
 	<!-- /#wrapper -->
     <script>
+    
+            	<!--图片插件初始-->
+	$("#imgPath").fileinput({
+		 initialPreview: [
+	        "<img src='${message.image}' class='file-preview-image'>",
+	    	],
+	    overwriteInitial: true,
+	    initialCaption: "${message.image}"
+		});
+    
 	$(document).ready(function() {
 		$('#msgContent').summernote({
 			height : 300,
 			focus : true,
-			lang : 'zh-CN',
+			oninit:function(){
+				$('#msgContent').code('${message.content}');
+			},
 			onImageUpload: function(files, editor, editable) {
    				//重写文件上传
    				sendFile(files[0],editor,editable);

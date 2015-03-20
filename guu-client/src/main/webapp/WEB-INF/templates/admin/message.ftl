@@ -116,7 +116,7 @@
 	
 	function del(){
 		var size = $("input[name='ckbox']:checked").size();
-		if(size=0){
+		if(size==0){
 			alert("请选择要删除的记录");
 		}else
 		{
@@ -132,7 +132,7 @@
      
     function toUpdate(){
    	 	var size = $("input[name='ckbox']:checked").size();
-		if(size=1){
+		if(size==1){
 			var pids="";
 			$("input[name='ckbox']:checked").each(function(){
 				pids=$(this).val();
