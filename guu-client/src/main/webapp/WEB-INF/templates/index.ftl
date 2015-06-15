@@ -2,273 +2,360 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>谷雨：专注 HTML5 && 响应式  </title>
+    <title>Agency - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="${base}/resources/common/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="${base}/resources/common/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Add custom CSS here -->
-    <link href="${base}/resources/stylish/css/stylish.css" rel="stylesheet">
-    <link href="${base}/resources/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="${base}/resources/common/css/fileinput.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="${base}/resources/agency/css/agency.css" rel="stylesheet">
 
-	<script src="${base}/resources/common/js/jquery-1.11.2.js"></script>
-	<script src="${base}/resources/common/js/fileinput.min.js"></script>
+    <!-- Custom Fonts -->
+    <link href="${base}/resources/common/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
-<body>
+<body id="page-top" class="index">
 
-    <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand"><a href="index.ftl">GUU</a>
-            </li>
-            <li><a href="#top">首页</a>
-            </li>
-            <li><a href="#about">关于</a>
-            </li>
-            <li><a href="#services">服务</a>
-            </li>
-            <li><a href="#portfolio">案例</a>
-            </li>
-            <li><a href="#contact">联系我们</a>
-            </li>
-        </ul>
-    </div>
-    <!-- /Side Menu -->
-
-    <!-- Full Page Image Header Area -->
-    <div id="top" class="header">
-        <div class="vert-text">
-            <h1>谷  雨</h1>
-            <h3>播种希望,收获未来</h3>
-            <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
-        </div>
-    </div>
-    <!-- /Full Page Image Header Area -->
-
-    <!-- Intro -->
-    <div id="about" class="intro">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="row">
-             <div class="col-md-6  text-center">
-                   <img class="img-portfolio img-responsive" src="resources/stylish/img/responsive.png"/>
-                </div>
-                <div class="col-md-6  text-center">
-                   
-                    <p class="lead"><b>响应式设计</b>
-根据访问者的设备类型，自动调整页面版式，适应电脑、iPad，手机等各类不同尺寸的屏幕，无需再为各种设备开发多个版本。
-                    </p>
-                </div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">G U U</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">服务</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">案例</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">事件</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">团队</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome To Our Studio!</div>
+                <div class="intro-heading">It's Nice To Meet You</div>
+                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
-    </div>
-    <!-- /Intro -->
+    </header>
 
-    <!-- Services -->
-    <div id="services" class="services">
+    <!-- Services Section -->
+    <section id="services">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <h2>服务</h2>
-                    <hr>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">我们的服务</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
-            <div class="row">
-            <#if webCache?exists>
+            <div class="row text-center">
              <#list webCache.businesses as bus >
-             <div class="col-md-2 col-md-offset-2 text-center">
-                    <div class="service-item">
-                       <img src="${bus.image}">
-                        <h4>${bus.name}</h4>
-                        <p>${bus.description}</p>
-                    </div>
+                <div class="col-md-4">
+                  	<span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">${bus.name}</h4>
+                    <p class="text-muted">${bus.description}</p>
                 </div>
-             </#list>
-             </#if>
-                <div class="col-md-2 col-md-offset-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-rocket"></i>
-                        <h4>网站维护</h4>
-                        <p>Did your navigation system shut down in the middle of that asteroid field? We can repair any dings and scrapes to your spacecraft!</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-magnet"></i>
-                        <h4>网站设计</h4>
-                        <p>Need to know how magnets work? Our problem solving solutions team can help you identify problems and conduct exploratory research.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-shield"></i>
-                        <h4>域名注册</h4>
-                        <p>Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.</p>
-                    </div>
-                </div>
-                <div class="col-md-2 text-center">
-                    <div class="service-item">
-                        <i class="service-icon fa fa-pencil"></i>
-                        <h4>空间代理</h4>
-                        <p>We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!</p>
-                    </div>
-                </div>
+               </#list> 
+               
             </div>
         </div>
-        
-    </div>
-    <!-- /Services -->
+    </section>
 
-    <!-- Callout -->
-    <div class="callout">
-        <div class="vert-text">
-            <h1>A Dramatic Text Area</h1>
-        </div>
-    </div>
-    <!-- /Callout -->
-
-    <!-- Portfolio -->
-    <div id="portfolio" class="portfolio">
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <h2>案 例</h2>
-                    <hr>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-md-offset-2 text-center">
-                    <div class="portfolio-item">
-                        <a href="templates/business/index.html">
-                            <img class="img-portfolio img-responsive" src="resources/stylish/img/portfolio1.png">
-                        </a>
-                        <h4>Cityscape</h4>
+              <#list webCache.projects as project >
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="${project.image}" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>${project.title}</h4>
+                        <p class="text-muted">${project.description}</p>
                     </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <div class="portfolio-item">
-                        <a href="templates/freelancer/index.html">
-                            <img class="img-portfolio img-responsive" src="resources/stylish/img/portfolio2.png">
-                        </a>
-                        <h4>Is That On Fire?</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-md-offset-2 text-center">
-                    <div class="portfolio-item">
-                        <a href="templates/grayscale/index.html">
-                            <img class="img-portfolio img-responsive" src="resources/stylish/img/portfolio3.png">
-                        </a>
-                        <h4>Stop Sign</h4>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="portfolio-item">
-                        <a href="templates/landing/index.html">
-                            <img class="img-portfolio img-responsive" src="resources/stylish/img/portfolio4.png">
-                        </a>
-                        <h4>Narrow Focus</h4>
-                    </div>
-                </div>
+               </#list> 
             </div>
         </div>
-    </div>
-    <!-- /Portfolio -->
+    </section>
 
-    <!-- Call to Action -->
-    <div class="call-to-action">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-default">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                    <#list webCache.messages as msg >
+                        <#if msg_index%2==0>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="${msg.image}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>${msg.creatTime?date}</h4>
+                                    <h4 class="subheading">${msg.title}</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">${msg.description}</p>
+                                </div>
+                            </div>
+                        </li>
+                        <#else>
+                          <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="${msg.image}" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>${msg.creatTime?date}</h4>
+                                    <h4 class="subheading">${msg.title}</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">${msg.description}</p>
+                                </div>
+                            </div>
+                        </li>
+                        </#if>
+                       </#list> 
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /Call to Action -->
+    </section>
 
-    <!-- Map
-    <div id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
-    </div>
-     -->
-    <!-- /Map -->
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+            	
+             <#list webCache.teams as team >
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="${team.photo}" class="img-responsive img-circle" alt="">
+                        <h4>${team.userName}</h4>
+                        <p class="text-muted">${team.userDesc}</p>
+                        <!--
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+                </#list>
+               
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
+
+    <!-- Clients Aside
+    <aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+ -->
+ 
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm"  novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="姓 名 *" id="name" name="userName" required="required"  data-validation-required-message="请输入名字！">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="邮 箱 " id="email" name="userEmail">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="电 话 " id="phone" name="userPhone" >
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="留言 信息 .*" id="message" name="content"  required="required"  data-validation-required-message="留言信息不能为空！"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <ul class="list-inline">
-                        <li><i class="fa fa-facebook fa-3x"></i>
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><i class="fa fa-twitter fa-3x"></i>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><i class="fa fa-dribbble fa-3x"></i>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
-                    <div class="top-scroll">
-                        <a href="#top"><i class="fa fa-arrow-circle-up scroll fa-4x"></i></a>
-                    </div>
-                    <hr>
-                    <p>Copyright &copy; Company 2015</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- /Footer -->
 
-    <!-- JavaScript -->
-    <script src="${base}/resources/common/js/bootstrap.js"></script>
+  
 
-    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    <!-- jQuery -->
+    <script src="${base}/resources/common/js/jquery-1.11.2.js"></script>
 
-<script>
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    </script>
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    </script>
-    <script>
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+    <!-- Bootstrap Core JavaScript -->
+    <script src="${base}/resources/common/js/bootstrap.min.js"></script>
 
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
+    <!-- Plugin JavaScript -->
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="${base}/resources/agency/js/classie.js"></script>
+    <script src="${base}/resources/agency/js/cbpAnimatedHeader.js"></script>
 
+    <!-- Contact Form JavaScript -->
+    <script src="${base}/resources/agency/js/jqBootstrapValidation.js"></script>
+    <script src="${base}/resources/agency/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="${base}/resources/agency/js/agency.js"></script>
+    
 </body>
 
 </html>
