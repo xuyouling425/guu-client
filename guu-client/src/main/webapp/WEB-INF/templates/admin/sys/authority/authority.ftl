@@ -30,7 +30,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                         <form role="form" id="msgForm" action=""  method="post">	   
+                         <form role="form" id="autForm" action=""  method="post">	   
                         <!--添加-->
                          <button type="button" class="btn btn-default" aria-label="Left Align" onclick="toadd()">
 							  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -125,8 +125,8 @@
 				pids=pids+$(this).val()+"-";
 			})
 			$("#pids").val(pids);
-			$("#msgForm").prop("action","${base}/message/delete");
-			$("#msgForm").submit();
+			$("#autForm").prop("action","${base}/authority/delete");
+			$("#autForm").submit();
 		}
 	}
      
@@ -138,13 +138,14 @@
 				pids=$(this).val();
 			})
 			$("#pids").val(pids);
-			$("#msgForm").prop("action","${base}/message/toUpdate");
-			$("#msgForm").submit();
+			$("#autForm").prop("action","${base}/authority/toUpdate");
+			$("#autForm").submit();
 		}else
 		{
 			alert("请选择要修改的一条记录");
 		}
-    }        
+	}
+           
     
     </script>
 
