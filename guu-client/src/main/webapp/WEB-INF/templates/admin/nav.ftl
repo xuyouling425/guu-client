@@ -275,19 +275,19 @@
                             <a href="${base}/about/selAbout"><i class="fa fa-edit fa-fw"></i> 关于</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> 系统设置<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="panels-wells.html">Panels and Wells</a>
+                                    <a href="${base}/user/query">用户管理</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">Buttons</a>
+                                    <a href="${base}/role/query">角色管理</a>
                                 </li>
                                 <li>
-                                    <a href="notifications.html">Notifications</a>
+                                    <a href="${base}/authority/queryAll">权限管理</a>
                                 </li>
                                 <li>
-                                    <a href="typography.html">Typography</a>
+                                    <a href="typography.html">访问</a>
                                 </li>
                                 <li>
                                     <a href="grid.html">Grid</a>
