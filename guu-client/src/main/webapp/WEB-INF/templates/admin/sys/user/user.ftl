@@ -68,9 +68,9 @@
                                        		<td><input id="ckbox" name="ckbox" type="checkbox" class="checkboxes" value="${user.userId}"></td>
                                        		<td>${user.userName}</td>
                                             <td>${user.phone}</td>
-                                            <td>${user.emial}</td>
+                                            <td>${user.email}</td>
                                             <td>${user.userDesc}</td>
-                                            <td>${user.roleStatus}</td>
+                                            <td>${user.userStatus}</td>
                                         </tr>
                                       </#list>  
                                     </tbody>
@@ -105,7 +105,7 @@
     });
     
     function toadd(){
-		window.location.href = "${base}/role/toAdd";
+		window.location.href = "${base}/user/toAdd";
 	}
 	
 	function reSelected(){
@@ -125,7 +125,7 @@
 				pids=pids+$(this).val()+"-";
 			})
 			$("#pids").val(pids);
-			$("#autForm").prop("action","${base}/role/delete");
+			$("#autForm").prop("action","${base}/user/delete");
 			$("#autForm").submit();
 		}
 	}
@@ -138,7 +138,7 @@
 				pids=$(this).val();
 			})
 			$("#pids").val(pids);
-			$("#autForm").prop("action","${base}/role/toUpdate");
+			$("#autForm").prop("action","${base}/user/toUpdate");
 			$("#autForm").submit();
 		}else
 		{
