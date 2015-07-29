@@ -40,7 +40,7 @@
 							<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 						</button>
 						 <!--删除-->
-			             <button type="button" class="btn btn-default" aria-label="Left Align" onclick="del()">
+			             <button id="deleteBtn" data-toggle="confirmation"  type="button" class="btn btn-default" aria-label="Left Align" onclick="del()">
 							<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 						</button>  
 						<input type="hidden" id="pids" name="pids">
@@ -92,7 +92,7 @@
 
     <script src="${base}/resources/common/js/plugins/dataTables/jquery.dataTables.js"></script>
     <script src="${base}/resources/common/js/plugins/dataTables/dataTables.bootstrap.js"></script>
-
+	<script src="${base}/resources/common/js/bootstrap-confirmation.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
@@ -114,20 +114,26 @@
          });  
 	}
 	
-	function del(){
-		var size = $("input[name='ckbox']:checked").size();
-		if(size==0){
-			alert("请选择要删除的记录");
-		}else
-		{
-			var pids="-";
-			$("input[name='ckbox']:checked").each(function(){
-				pids=pids+$(this).val()+"-";
-			})
-			$("#pids").val(pids);
-			$("#autForm").prop("action","${base}/user/delete");
-			$("#autForm").submit();
-		}
+	function del(){		
+           $('[data-toggle="confirmation"]').confirmation({
+           	   popout:true,
+               title:"确认要删除吗？",
+               onConfirm: function () {
+	               var size = $("input[name='ckbox']:checked").size();
+					if(size==0){
+						alert("请选择要删除的记录");
+					}else
+					{
+	                     var pids="-";
+						$("input[name='ckbox']:checked").each(function(){
+							pids=pids+$(this).val()+"-";
+							})
+						$("#pids").val(pids);
+						$("#autForm").prop("action","${base}/user/delete");
+						$("#autForm").submit();
+					}
+                },
+          });
 	}
      
     function toUpdate(){
@@ -145,8 +151,7 @@
 			alert("请选择要修改的一条记录");
 		}
 	}
-           
-    
+   
     </script>
 
 </body>

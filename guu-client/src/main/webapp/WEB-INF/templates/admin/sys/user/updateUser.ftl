@@ -109,6 +109,19 @@
 	    overwriteInitial: true,
 	    initialCaption: "${user.photo}"
 		});
+		
+		$("#roleId").change(function(){
+			var roleId =$(this).val();
+			$("[name='role']").each(function(){
+			 if(!$(this).prop("checked")){
+				if(roleId==$(this).val()){
+					 $(this).prop("checked", true);  
+				}else{
+				 	$(this).prop("checked", false);
+				}
+			}
+		   });
+		   });
     </script>
 
 </body>

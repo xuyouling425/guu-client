@@ -45,6 +45,7 @@
 											<div class="form-group">
 												<label>角色</label>
 												  <select class="form-control" id="roleId" name="roleId">
+												   <option value="">请设置用户角色</option>
 	                                                <#list roleList as role>
 	                                                <option value="${role.roleId}">${role.roleName}</option>
 	                                                 </#list>
@@ -67,7 +68,7 @@
 									<div class="col-lg-12">
 										
 											<div class="form-group">
-												<label><b>角色信息</b></label>
+												<label><b>可以给用户选择多个角色信息</b></label>
 													<div class="row">
  												 <#list roleList as role >
  												  <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
@@ -99,9 +100,21 @@
 
 	</div>
 	<!-- /#wrapper -->
+	<script src="${base}/resources/common/js/bootstrap-confirmation.js"></script>
 	
     <script>
-
+		$("#roleId").change(function(){
+			var roleId =$(this).val();
+			$("[name='role']").each(function(){
+			 if(!$(this).prop("checked")){
+				if(roleId==$(this).val()){
+					 $(this).prop("checked", true);  
+				}else{
+				 	$(this).prop("checked", false);
+				}
+			}
+		   });
+		   });
     </script>
 
 </body>
