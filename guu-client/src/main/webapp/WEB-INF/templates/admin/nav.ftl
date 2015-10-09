@@ -221,7 +221,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="${base}/user/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="../logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -290,7 +290,7 @@
                                     <a href="typography.html">访问</a>
                                 </li>
                                 <li>
-                                    <a href="grid.html">Grid</a>
+                                    <a href="${base}/template/myTemplate">模板管理</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

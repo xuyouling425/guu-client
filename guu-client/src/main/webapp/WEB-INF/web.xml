@@ -4,26 +4,6 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 
-	<!-- guu-content.xml文件加载 -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:guu-content.xml</param-value>
-	</context-param>
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-
-
-	<!-- slf4j 日志管理 -->
-	<context-param>
-		<param-name>log4jConfigLocation</param-name>
-		<param-value>/WEB-INF/classes/logback.xml</param-value>
-	</context-param>
-	<!-- 加载log4j配置文件 -->
-	<listener>
-		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-	</listener>
-
 
 	<!-- spirng mvc 控制器 -->
 	<servlet>
@@ -39,6 +19,67 @@
 		<servlet-name>guu</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+<!-- elfinder -->
+	<servlet>
+		<servlet-name>elfinder</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:elfinder-servlet.xml</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>elfinder</servlet-name>
+		<url-pattern>/elfinder-servlet/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- 加载log4j配置文件 -->
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+
+	<!-- 自定义监听器 -->
+	<listener>
+		<listener-class>cn.net.guu.core.listener.InitContextLintener</listener-class>
+	</listener>
+
+
+	<!-- guu-content.xml文件加载 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:guu-content.xml
+			classpath*:guu-security.xml
+		</param-value>
+	</context-param>
+
+
+	<!-- slf4j 日志管理 -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/logback.xml</param-value>
+	</context-param>
+
+
+
+
+	<!-- 定义spring security代理Filter -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 	<!-- sping 字符集过滤器 -->
 	<filter>
@@ -57,18 +98,10 @@
 		<filter-name>characterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
-
-	<!-- Log4j 监听器 -->
-	<listener>
-		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-	</listener>
-
-	<!-- 自定义监听器 -->
-	<listener>
-		<listener-class>cn.net.guu.core.listener.InitContextLintener</listener-class>
-	</listener>
 	
+	
+
+
 	<!-- session 超时 -->
 	<session-config>
 		<session-timeout>10</session-timeout>
