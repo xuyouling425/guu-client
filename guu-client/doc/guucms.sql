@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2015/3/19 0:37:15                            */
+/* Created on:     2015/11/7 12:32:59                           */
 /*==============================================================*/
 
 
@@ -12,9 +12,9 @@ drop table if exists guu_cms_message;
 
 drop table if exists guu_cms_project;
 
-drop table if exists guu_sys_access;
+drop table if exists guu_config;
 
-drop table if exists guu_sys_access_resources;
+drop table if exists guu_sys_access;
 
 drop table if exists guu_sys_authority;
 
@@ -31,6 +31,8 @@ drop table if exists guu_sys_role_authority;
 drop table if exists guu_sys_user;
 
 drop table if exists guu_sys_user_role;
+
+drop table if exists guu_template;
 
 /*==============================================================*/
 /* Table: guu_cms_about                                         */
@@ -100,31 +102,34 @@ create table guu_cms_project
 );
 
 /*==============================================================*/
+/* Table: guu_config                                            */
+/*==============================================================*/
+create table guu_config
+(
+   config_id            varchar(32) not null,
+   config_name          varchar(500),
+   config_value         varchar(1000),
+   express              varchar(300),
+   status               int,
+   description          varchar(500),
+   default_value        varchar(1000),
+   template_id          varchar(32),
+   primary key (config_id)
+);
+
+/*==============================================================*/
 /* Table: guu_sys_access                                        */
 /*==============================================================*/
 create table guu_sys_access
 (
    access_id            varchar(32) not null,
    access_name          varchar(32),
-   access_code          varchar(32),
-   creat_time           datetime,
-   module               varchar(20),
+   access_url           varchar(300),
+   deep                 int,
+   parent_id            varchar(32),
    access_status        int,
-   issys                int,
    remark               varchar(100),
    primary key (access_id)
-);
-
-/*==============================================================*/
-/* Table: guu_sys_access_resources                              */
-/*==============================================================*/
-create table guu_sys_access_resources
-(
-   access_resources_id  varchar(32) not null,
-   access_id            varchar(32),
-   resources_id         varchar(32),
-   ar_status            int,
-   primary key (access_resources_id)
 );
 
 /*==============================================================*/
@@ -249,5 +254,24 @@ create table guu_sys_user_role
    role_id              varchar(32),
    ur_status            int,
    primary key (user_role_id)
+);
+
+/*==============================================================*/
+/* Table: guu_template                                          */
+/*==============================================================*/
+create table guu_template
+(
+   template_id          varchar(32) not null,
+   template_name        varchar(32),
+   user_id              varchar(32),
+   user_name            varchar(32),
+   create_time          datetime,
+   status               int,
+   local_addr           varchar(150),
+   template_index       varchar(150),
+   template_img         varchar(300),
+   template_desc        varchar(300),
+   type                 int,
+   primary key (template_id)
 );
 

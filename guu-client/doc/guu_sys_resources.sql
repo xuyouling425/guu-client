@@ -1,4 +1,4 @@
-INSERT INTO `guu_sys_resources` (`resources_id`, `resources_code`, `resources_name`, `resources_url`, `resources_type`, `creat_time`, `parent_id`, `resources_desc`, `res_status`, `issys`, `remark`) VALUES ('VIEW_ABOUT', 'VIEW_ABOUT', '查看关于', 'about/selAbort', 'ABOUT', NULL, NULL, '后台管理员查看关于页面', 1, 0, NULL);
+INSERT INTO `guu_sys_resources` (`resources_id`, `resources_code`, `resources_name`, `resources_url`, `resources_type`, `creat_time`, `parent_id`, `resources_desc`, `res_status`, `issys`, `remark`) VALUES ('VIEW_ABOUT', 'VIEW_ABOUT', '查看关于', 'about/selAbout', 'ABOUT', NULL, NULL, '后台管理员查看关于页面', 1, 0, NULL);
 
 INSERT INTO `guu_sys_resources` (`resources_id`, `resources_code`, `resources_name`, `resources_url`, `resources_type`, `creat_time`, `parent_id`, `resources_desc`, `res_status`, `issys`, `remark`) VALUES ('UPDATE_ABOUT', 'UPDATE_ABOUT', '更新关于', 'about/addModify', 'ABOUT', NULL, NULL, '后台管理员编辑/更新关于页面', 1, 0, NULL);
 
